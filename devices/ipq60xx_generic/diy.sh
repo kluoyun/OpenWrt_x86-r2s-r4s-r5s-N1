@@ -1,8 +1,8 @@
 #!/bin/bash
 shopt -s extglob
 
-make defconfig
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/ipq60xx target/linux/ipq60xx
+make defconfig
 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/qca package/qca
 
