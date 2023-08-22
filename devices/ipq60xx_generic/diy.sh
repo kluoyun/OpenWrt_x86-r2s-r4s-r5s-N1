@@ -2,6 +2,7 @@
 shopt -s extglob
 
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/ipq60xx target/linux/ipq60xx
+rm -rf target/linux/ipq60xx/patches-5.15/{0133-clk-ipq-support-for-resetting-multiple-bits.patch,0168-clk-qcom-ipq6018-fix-networking-resets.patch}
 make defconfig
 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/qca package/qca
