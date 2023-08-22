@@ -7,6 +7,8 @@ make defconfig
 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/qca package/qca
 
+sed -i "s/+kmod-pppoe/+kmod-pppoe +kmod-bonding/" package/qca/nss/qca-nss-clients-64/Makefile
+
 rm -rf package/kernel/{qca-nss-dp,qca-ssdk}
 
 sed -i "s/CONFIG_ALL_NONSHARED=y/CONFIG_ALL_NONSHARED=n/" .config
